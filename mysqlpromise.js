@@ -26,5 +26,6 @@ async function main() {
     const connection = await mysql.createConnection({host:'localhost', user: 'root', password: 'password', database: 'mysqlPromise'});
     // query database
     const [rows, fields] = await connection.execute(`INSERT INTO mysqlUser (name, email, phone) VALUES("john","john@email.com",6)`);
+    console.log(rows);  
   }
   main()
